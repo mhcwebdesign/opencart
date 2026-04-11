@@ -46,9 +46,9 @@ $_['column_model']               = 'Modèle';
 $_['column_quantity']            = 'Quantité';
 $_['column_trial_price']         = 'Prix d\'Essai';
 $_['column_price']               = 'Prix Unitaire';
+$_['column_total']               = 'Total';
 $_['column_amount']              = 'Montant';
 $_['column_code']                = 'Code';
-$_['column_total']               = 'Total';
 $_['column_description']         = 'Description';
 $_['column_action']              = 'Action';
 
