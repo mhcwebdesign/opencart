@@ -1,5 +1,70 @@
 # OpenCart change log
 
+## [v4.x.x.x]
+
+#### Changes
+
+* Changed: Updated version to 4.1.0.4
+* Changed: Updated composer packages in https://github.com/opencart/opencart/pull/15326
+* Removed: Composer package aws/aws-sdk-php in https://github.com/opencart/opencart/pull/15326
+* Changed: Emulation of GLOB_BRACE for Alpine/musl environments in https://github.com/opencart/opencart/pull/15328
+* Removed: Developer Settings / Vendor button in https://github.com/opencart/opencart/pull/15329
+* Fixed: Various bugs with sku, upc, ean, jan, isbn, mpn in https://github.com/opencart/opencart/pull/15331
+* Changed: Update Lint.yml to run on PHP 8.1+ in https://github.com/opencart/opencart/pull/15332
+* Fixed: Viewing embedded Youtube video in https://github.com/opencart/opencart/pull/15334
+* Fixed: Renamed total function as they had an incorrect name in https://github.com/opencart/opencart/pull/15334
+* Fixed: Disabled products design same as other table lists in https://github.com/opencart/opencart/pull/15334
+* Added: Some additional form text in https://github.com/opencart/opencart/pull/15335
+* Changed: Update of some french language files in https://github.com/opencart/opencart/pull/15336
+* Buffix: After creating multiple folders, the root directory images are not displayed in https://github.com/opencart/opencart/pull/15337
+* Bugfix: Product settlement in https://github.com/opencart/opencart/pull/15337
+* Bugfix: In additional Stores Cookie Policy is not selectable in https://github.com/opencart/opencart/pull/15339
+* Removed: upload/system/helper/filter.php as unused
+
+
+## [v4.1.0.3] (Release date: 24.03.2025)
+
+https://github.com/opencart/opencart/releases/tag/4.1.0.3  
+
+#### Changes
+* More PHPDocs work by @TheCartpenter in https://github.com/opencart/opencart/pull/14700
+* [fix] The update procedure does not work by @batumibiz in https://github.com/opencart/opencart/pull/14703
+* Modified upgrade/upgrade PHPDocs by @TheCartpenter in https://github.com/opencart/opencart/pull/14708
+* Update to admin marketplace/installer.php by @milsaware in https://github.com/opencart/opencart/pull/14709
+* removed country_id by @farshadfmr in https://github.com/opencart/opencart/pull/14713
+* Removed identifier_id in PHPDocs of getIdentifierByCode method in model/identifier by @TheCartpenter in https://github.com/opencart/opencart/pull/14714
+* Removed country_id and zone_id from deleteDescriptionsByLanguageId PHPDocs by @TheCartpenter in https://github.com/opencart/opencart/pull/14717
+* Modified localisation/country controller and model delete descriptions method by @TheCartpenter in https://github.com/opencart/opencart/pull/14720
+* More model comments work by @TheCartpenter in https://github.com/opencart/opencart/pull/14725
+* More PHPDocs work and fixed some package paths in extensions by @TheCartpenter in https://github.com/opencart/opencart/pull/14726
+* More PHPDocs work by @TheCartpenter in https://github.com/opencart/opencart/pull/14727
+
+
+
+## [v4.1.0.2] (Release date: 21.03.2025)
+
+https://github.com/opencart/opencart/releases/tag/4.1.0.2
+
+## [v4.1.0.1] (Release date: 20.03.2025)
+
+https://github.com/opencart/opencart/releases/tag/4.1.0.1
+
+## [v4.1.0.0] (Release date: 13.01.2025)
+
+https://github.com/opencart/opencart/releases/tag/4.1.0.0
+
+#### Changes
+
+* Added OCMod
+* Added French language
+* Added Blog system
+* Updated Order editor, normalised the ordered editor system.
+* Fixed subscription system
+
+## [v4.0.2.3] (Release date: 15.09.2023)
+
+https://github.com/opencart/opencart/releases/tag/4.0.2.3
+
 ## [v4.0.2.2] (Release date: 18.04.2023)
 
 https://github.com/opencart/opencart/releases/tag/4.0.2.2
