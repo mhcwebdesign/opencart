@@ -16,10 +16,23 @@
 * Fixed: Disabled products design same as other table lists in https://github.com/opencart/opencart/pull/15334
 * Added: Some additional form text in https://github.com/opencart/opencart/pull/15335
 * Changed: Update of some french language files in https://github.com/opencart/opencart/pull/15336
-* Buffix: After creating multiple folders, the root directory images are not displayed in https://github.com/opencart/opencart/pull/15337
-* Bugfix: Product settlement in https://github.com/opencart/opencart/pull/15337
-* Bugfix: In additional Stores Cookie Policy is not selectable in https://github.com/opencart/opencart/pull/15339
-* Removed: upload/system/helper/filter.php as unused
+* Fixed: After creating multiple folders, the root directory images are not displayed in https://github.com/opencart/opencart/pull/15337
+* Fixed: Product settlement in https://github.com/opencart/opencart/pull/15337
+* Fixed: In additional Stores Cookie Policy is not selectable in https://github.com/opencart/opencart/pull/15339
+* Removed: upload/system/helper/filter.php as unused in https://github.com/opencart/opencart/pull/15340
+* Changed: Retrieve more in depth files from extension directory for permission in https://github.com/opencart/opencart/pull/15342
+* Fixed: Incorrect glob path used in admin/controller/common/developer.php in https://github.com/opencart/opencart/pull/15342
+* Fixed: Fix wrong search result pagination in https://github.com/opencart/opencart/pull/15342
+* Fixed: Updated language methods in https://github.com/opencart/opencart/pull/15342
+* Fixed: Sales order Store - wrong in the order list in https://github.com/opencart/opencart/pull/15343
+* Fixed: Wrong column used in topic layout methods (article_id instead of topic_id) in https://github.com/opencart/opencart/pull/15343
+* Fixed: Fix autoloader: one namespace can contain classes from different folders in https://github.com/opencart/opencart/pull/15344
+* Fixed: Checkout cart page lists wrong item totals in https://github.com/opencart/opencart/pull/15344
+* Changed: Event list: always allow for viewing event details in https://github.com/opencart/opencart/pull/15345
+* Fixed: Fix autoloader in storeInstance to ensure proper class loading in https://github.com/opencart/opencart/pull/15345
+* Fixed: In Admin, while creating new order, Product is not being added in https://github.com/opencart/opencart/pull/15346
+* Changed: Safest one just in case the product options are empty in https://github.com/opencart/opencart/pull/15346
+* Fixed: WYSIWYG misconfiguration in ADMIN page for product edit in https://github.com/opencart/opencart/pull/15346
 
 
 ## [v4.1.0.3] (Release date: 24.03.2025)
