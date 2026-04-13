@@ -33,7 +33,7 @@
 * Fixed: In Admin, while creating new order, Product is not being added in https://github.com/opencart/opencart/pull/15346
 * Changed: Safest one just in case the product options are empty in https://github.com/opencart/opencart/pull/15346
 * Fixed: WYSIWYG misconfiguration in ADMIN page for product edit in https://github.com/opencart/opencart/pull/15346
-
+* Fixed: Unnecessary filter_data parameter for getTotalIdentifiers in https://github.com/opencart/opencart/pull/15349
 
 ## [v4.1.0.3] (Release date: 24.03.2025)
 
