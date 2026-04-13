@@ -146,7 +146,7 @@ class Register extends \Opencart\System\Engine\Controller {
 			$data['shipping_custom_field'] = [];
 		}
 
-		// Zone
+		// Shipping Zones
 		$this->load->model('localisation/zone');
 
 		if ($data['payment_country_id'] == $data['shipping_country_id']) {
@@ -386,6 +386,7 @@ class Register extends \Opencart\System\Engine\Controller {
 				// Zones
 				$this->load->model('localisation/zone');
 
+				// Total Zones
 				$zone_total = $this->model_localisation_zone->getTotalZonesByCountryId((int)$post_info['shipping_country_id']);
 
 				if ($zone_total && !$post_info['shipping_zone_id']) {
