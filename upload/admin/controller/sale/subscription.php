@@ -505,21 +505,17 @@ class Subscription extends \Opencart\System\Engine\Controller {
 			$data['customer_edit'] = '';
 		}
 
-		// Store
-		$data['stores'] = [];
+		// Stores
+		$stores = [];
 
-		$data['stores'][] = [
+		$stores[] = [
 			'store_id' => 0,
-			'name'     => $this->config->get('config_name')
+			'name'     => $this->language->get('text_default')
 		];
 
 		$this->load->model('setting/store');
 
-		$results = $this->model_setting_store->getStores();
-
-		foreach ($results as $result) {
-			$data['stores'][] = $result;
-		}
+		$data['stores'] = array_merge($stores, $this->model_setting_store->getStores());
 
 		if (!empty($subscription_info)) {
 			$data['store_id'] = $subscription_info['store_id'];
@@ -711,7 +707,7 @@ class Subscription extends \Opencart\System\Engine\Controller {
 			$data['shipping_zones'] = $this->model_localisation_zone->getZonesByCountryId($data['shipping_country_id']);
 		}
 
-		// Shipping method
+		// Shipping Method
 		if (!empty($subscription_info['shipping_method'])) {
 			$data['shipping_method_name'] = $subscription_info['shipping_method']['name'];
 			$data['shipping_method_code'] = $subscription_info['shipping_method']['code'];
