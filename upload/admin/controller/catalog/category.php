@@ -585,24 +585,36 @@ class Category extends \Opencart\System\Engine\Controller {
 		$json = [];
 
 		if (isset($this->request->get['filter_name'])) {
-			$this->load->model('catalog/category');
+			$filter_name = '%' . $this->request->get['filter_name'] . '%';
+		} else {
+			$filter_name = '';
+		}
 
-			$filter_data = [
-				'filter_name' => $this->request->get['filter_name'] . '%',
-				'sort'        => 'name',
-				'order'       => 'ASC',
-				'start'       => 0,
-				'limit'       => $this->config->get('config_autocomplete_limit')
+		if (isset($this->request->get['filter_status']) && $this->request->get['filter_status'] =! '') {
+			$filter_status = $this->request->get['filter_status'];
+		} else {
+			$filter_status = '';
+		}
+
+		$this->load->model('catalog/category');
+
+		$filter_data = [
+			'filter_name'   => $filter_name,
+			'filter_status' => $filter_status,
+			'sort'          => 'name',
+			'order'         => 'ASC',
+			'start'         => 0,
+			'limit'         => $this->config->get('config_autocomplete_limit')
+		];
+
+		$results = $this->model_catalog_category->getCategories($filter_data);
+
+		foreach ($results as $result) {
+			$json[] = [
+				'category_id' => $result['category_id'],
+				'name'        => $result['name'],
+				'status'      => $result['status']
 			];
-
-			$results = $this->model_catalog_category->getCategories($filter_data);
-
-			foreach ($results as $result) {
-				$json[] = [
-					'category_id' => $result['category_id'],
-					'name'        => $result['name']
-				];
-			}
 		}
 
 		$sort_order = [];
