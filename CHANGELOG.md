@@ -34,6 +34,25 @@
 * Changed: Safest one just in case the product options are empty in https://github.com/opencart/opencart/pull/15346
 * Fixed: WYSIWYG misconfiguration in ADMIN page for product edit in https://github.com/opencart/opencart/pull/15346
 * Fixed: Unnecessary filter_data parameter for getTotalIdentifiers in https://github.com/opencart/opencart/pull/15349
+* Fixed: Order files are not displaying in the admin order details page in https://github.com/opencart/opencart/pull/15355
+* Fixed: Admin login as customer not working in https://github.com/opencart/opencart/pull/15355
+* Changed: To collect cache files, do it only if the random has fallen to the cleanup in https://github.com/opencart/opencart/pull/15356
+* Fixed: Should use array_merge in https://github.com/opencart/opencart/pull/15356
+* Fixed: Error when deleting a product from Wishlist in https://github.com/opencart/opencart/pull/15357
+* Changed: Latest Orders table header highlighted in https://github.com/opencart/opencart/pull/15357
+* Changed: Improved Category and Product search for the Admin panel in https://github.com/opencart/opencart/pull/15357
+* Changed: Reduced the size of the "Delete" buttons on the 'Links' tab of the product form in https://github.com/opencart/opencart/pull/15358
+* Fixed: Missing language definition in account/forgotten.php in https://github.com/opencart/opencart/pull/15359
+* Fixed: Product::addReport(): Argument 1 must be of type int, string given in https://github.com/opencart/opencart/pull/15359
+* Fixed: Wrong total on cart page in https://github.com/opencart/opencart/pull/15359
+* Fixed: getTotals() in https://github.com/opencart/opencart/pull/15359
+* Fixed: Admin order notes are visible to the customer
+* Changed: Add OPTIMIZE TABLE to db.php
+* Fixed: The zone name was not displayed in the list
+* Changed: The password recovery link in the email was visible as plain text
+* Fixed: Undefined array key "author" in catalog/controller/product/review.php on line 161
+* Fixed: getProduct(): Argument 1 ($product_id) must be of type int
+* Fixed: PHP Warning:  Undefined array key "en-gb'nvOpzp;..." in catalog/controller/common/language.php
 
 ## [v4.1.0.3] (Release date: 24.03.2025)
 
