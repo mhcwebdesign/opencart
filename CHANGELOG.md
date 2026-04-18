@@ -53,6 +53,7 @@
 * Fixed: Undefined array key "author" in catalog/controller/product/review.php on line 161
 * Fixed: getProduct(): Argument 1 ($product_id) must be of type int
 * Fixed: PHP Warning:  Undefined array key "en-gb'nvOpzp;..." in catalog/controller/common/language.php
+* Fixed: Category Filter in https://github.com/opencart/opencart/pull/15363
 
 ## [v4.1.0.3] (Release date: 24.03.2025)
 
