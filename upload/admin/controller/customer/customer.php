@@ -262,7 +262,7 @@ class Customer extends \Opencart\System\Engine\Controller {
 
 		$data['action'] = $this->url->link('customer/customer.list', 'user_token=' . $this->session->data['user_token'] . $url);
 
-		// Setting
+		// Stores
 		$this->load->model('setting/store');
 
 		$stores = $this->model_setting_store->getStores();
