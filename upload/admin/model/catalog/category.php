@@ -411,8 +411,7 @@ class Category extends \Opencart\System\Engine\Model {
 
 		$implode = [];
 		if (!empty($data['filter_name'])) {
-			$filter_name = htmlspecialchars_decode($data['filter_name']);
-			$implode[] = "LCASE(`name`) LIKE '%" . $this->db->escape(oc_strtolower($filter_name)) . "%'";
+			$implode[] = "LCASE(`name`) LIKE '%" . $this->db->escape(oc_strtolower($data['filter_name'])) . "%'";
 		}
 
 		if (isset($data['filter_status']) && $data['filter_status'] !== '') {
