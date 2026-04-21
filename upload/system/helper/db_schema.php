@@ -685,7 +685,7 @@ function oc_db_schema() {
 			],
 			[
 				'name' => 'description',
-				'type' => 'text'
+				'type' => 'mediumtext'
 			],
 			[
 				'name' => 'image',
@@ -950,7 +950,7 @@ function oc_db_schema() {
 			],
 			[
 				'name' => 'description',
-				'type' => 'text'
+				'type' => 'mediumtext'
 			],
 			[
 				'name' => 'image',
@@ -1230,7 +1230,7 @@ function oc_db_schema() {
 			],
 			[
 				'name' => 'description',
-				'type' => 'text'
+				'type' => 'mediumtext'
 			],
 			[
 				'name' => 'meta_title',
@@ -4118,7 +4118,7 @@ function oc_db_schema() {
 			],
 			[
 				'name' => 'setting',
-				'type' => 'text'
+				'type' => 'mediumtext'
 			]
 		],
 		'primary' => [
@@ -5352,7 +5352,7 @@ function oc_db_schema() {
 			],
 			[
 				'name' => 'description',
-				'type' => 'text'
+				'type' => 'mediumtext'
 			],
 			[
 				'name' => 'tag',
@@ -6479,7 +6479,7 @@ function oc_db_schema() {
 			],
 			[
 				'name' => 'data',
-				'type' => 'text'
+				'type' => 'mediumtext'
 			],
 			[
 				'name' => 'expire',
@@ -6525,7 +6525,7 @@ function oc_db_schema() {
 			],
 			[
 				'name' => 'value',
-				'type' => 'text'
+				'type' => 'mediumtext'
 			],
 			[
 				'name'    => 'serialized',
