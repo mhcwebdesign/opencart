@@ -73,7 +73,7 @@ class Api {
 
 		$status = curl_getinfo($curl, CURLINFO_HTTP_CODE);
 
-		curl_close($curl);
+		unset($curl);
 
 		if ($status == 200) {
 			$response_info = json_decode($response, true);
