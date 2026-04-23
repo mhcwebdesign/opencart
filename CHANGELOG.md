@@ -54,6 +54,14 @@
 * Fixed: getProduct(): Argument 1 ($product_id) must be of type int
 * Fixed: PHP Warning:  Undefined array key "en-gb'nvOpzp;..." in catalog/controller/common/language.php
 * Fixed: Category Filter in https://github.com/opencart/opencart/pull/15363
+* Fixed: Fix OCMOD in https://github.com/opencart/opencart/pull/15354
+* Fixed: Some more filter fixes in https://github.com/opencart/opencart/pull/15368
+* Fixed: More filter fixes in https://github.com/opencart/opencart/pull/15369
+* Changed: Bootstrap 5.3.8 update in https://github.com/opencart/opencart/pull/15371
+* Changed: Increase description and settings field size
+* Changed: Upgrade FontAwesome to 7.2.0 and BS move OC specific vars in https://github.com/opencart/opencart/pull/15375
+* Fixed: Removal of deprecated function calls in https://github.com/opencart/opencart/pull/15376
+* Fixed: Product variant option image in https://github.com/opencart/opencart/pull/15378
 
 ## [v4.1.0.3] (Release date: 24.03.2025)
 
