@@ -64,18 +64,6 @@ class Product extends \Opencart\System\Engine\Controller {
 			$filter_quantity_to = '';
 		}
 
-		if (isset($this->request->get['filter_quantity_from'])) {
-			$filter_quantity_from = $this->request->get['filter_quantity_from'];
-		} else {
-			$filter_quantity_from = '';
-		}
-
-		if (isset($this->request->get['filter_quantity_to'])) {
-			$filter_quantity_to = $this->request->get['filter_quantity_to'];
-		} else {
-			$filter_quantity_to = '';
-		}
-
 		if (isset($this->request->get['filter_status'])) {
 			$filter_status = $this->request->get['filter_status'];
 		} else {
