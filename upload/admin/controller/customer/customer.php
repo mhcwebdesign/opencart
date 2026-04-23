@@ -1211,8 +1211,6 @@ class Customer extends \Opencart\System\Engine\Controller {
 
 		if (!$json) {
 			// Customer
-			$this->load->model('customer/customer');
-
 			$this->model_customer_customer->addTransaction($customer_id, (string)$post_info['description'], (float)$post_info['amount']);
 
 			$json['success'] = $this->language->get('text_success');
