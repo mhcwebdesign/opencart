@@ -671,6 +671,7 @@ class Customer extends \Opencart\System\Engine\Controller {
 		}
 
 		$required = [
+			'customer_id'       => 0,
 			'store_id'          => 0,
 			'language_id'       => 0,
 			'customer_group_id' => 0,
@@ -681,6 +682,7 @@ class Customer extends \Opencart\System\Engine\Controller {
 			'custom_field'      => [],
 			'newsletter'        => 0,
 			'password'          => '',
+			'confirm'           => '',
 			'status'            => 0,
 			'safe'              => 0,
 			'commenter'         => 0
@@ -705,7 +707,7 @@ class Customer extends \Opencart\System\Engine\Controller {
 
 		$customer_info = $this->model_customer_customer->getCustomerByEmail($post_info['email']);
 
-		if ($customer_info && (!$post_info['customer_id'] && ($post_info['customer_id'] != $customer_info['customer_id']))) {
+		if ($customer_info && (!$post_info['customer_id'] || ($post_info['customer_id'] != $customer_info['customer_id']))) {
 			$json['error']['warning'] = $this->language->get('error_exists');
 		}
 
@@ -732,7 +734,7 @@ class Customer extends \Opencart\System\Engine\Controller {
 			}
 		}
 
-		if ($post_info['password'] || !isset($post_info['customer_id'])) {
+		if ($post_info['password'] || !$post_info['customer_id']) {
 			$password = html_entity_decode($post_info['password'], ENT_QUOTES, 'UTF-8');
 
 			if (!oc_validate_length($password, $this->config->get('config_password_length'), 40)) {
