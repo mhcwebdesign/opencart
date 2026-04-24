@@ -62,6 +62,12 @@
 * Changed: Upgrade FontAwesome to 7.2.0 and BS move OC specific vars in https://github.com/opencart/opencart/pull/15375
 * Fixed: Removal of deprecated function calls in https://github.com/opencart/opencart/pull/15376
 * Fixed: Product variant option image in https://github.com/opencart/opencart/pull/15378
+* Fixed: Extensive admin audit fixes: critical bugs in https://github.com/opencart/opencart/pull/15380
+* Fixed: Fix category filter and autocomplete in https://github.com/opencart/opencart/pull/15381
+* Fixed: Extensive admin audit fixes: high severity bugs in https://github.com/opencart/opencart/pull/15382
+* Changed: Extensive admin audit fixes: https://github.com/opencart/opencart/pull/15384
+* Changed: Extensive admin audit fixes: removal of obsolete language texts in https://github.com/opencart/opencart/pull/15385
+* Changed: Some more argument type fixes in https://github.com/opencart/opencart/pull/15386
 
 ## [v4.1.0.3] (Release date: 24.03.2025)
 
