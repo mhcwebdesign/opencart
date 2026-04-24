@@ -2619,7 +2619,7 @@ class Product extends \Opencart\System\Engine\Model {
 	 *
 	 * @param int $product_id primary key of the product record
 	 *
-	 * @return array<int, string> seo url records that have product ID
+	 * @return array<int, array<int, string>> seo url records that have product ID
 	 *
 	 * @example
 	 *
