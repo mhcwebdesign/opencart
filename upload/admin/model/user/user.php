@@ -666,8 +666,7 @@ class User extends \Opencart\System\Engine\Model {
 	 * @param int $user_id
 	 * @param int $start
 	 * @param int $limit
-	 * @param int $us      \
-	 *                     'er_id primary key of the user record
+	 * @param int $user_id primary key of the user record
 	 *
 	 * @return array<int, array<string, mixed>> authorize records
 	 *
@@ -721,33 +720,19 @@ class User extends \Opencart\System\Engine\Model {
 	}
 
 	/**
-	 * Reset Customer Au
-	 * th
-	 * o
-	 * ri
-	 * zes
+	 * Reset User Authorizes
 	 *
-	 * @
-	 * para
-	 * m
-	 * int
-	 * $
-	 * us
-	 * er
-	 * _id pr
-	 * imary
-	 * key of th
-	 * e customer recor
-	 * d
+	 * Reset user authorize record in the database.
 	 *
-	 * @ret
-	 * urn void
+	 * @param int $user_id primary key of the user record
 	 *
-	 * @
-	 * exa
-	 * mple
+	 * @return void
 	 *
-	 * @param int $user_id
+	 * @example
+	 *
+	 * $this->load->model('user/user');
+	 *
+	 * $this->model_user_user->resetAuthorizes($user_id);
 	 */
 	public function resetAuthorizes(int $user_id): void {
 		$this->db->query("UPDATE `" . DB_PREFIX . "user_authorize` SET `total` = '0' WHERE `user_id` = '" . (int)$user_id . "'");
@@ -761,15 +746,14 @@ class User extends \Opencart\System\Engine\Model {
 	 * @param int    $user_id primary key of the user record
 	 * @param string $type
 	 * @param string $code
-	 * @param string $codev
 	 *
-	 * @return int total number of authorize records that have user ID, token
+	 * @return void
 	 *
 	 * @example
 	 *
 	 * $this->load->model('user/user');
 	 *
-	 * $authorize_total = $this->model_user_user->addToken($user_id, $code, $type);
+	 * $this->model_user_user->addToken($user_id, $code, $type);
 	 */
 	public function addToken(int $user_id, string $type, string $code): void {
 		$this->db->query("DELETE FROM `" . DB_PREFIX . "user_token` WHERE `user_id` = '" . (int)$user_id . "' AND `type` = '" . $this->db->escape($type) . "'");
@@ -802,7 +786,6 @@ class User extends \Opencart\System\Engine\Model {
 	 * Delete Token By Code
 	 *
 	 * @param string $code
-	 * @param int    $customer_id primary key of the customer record
 	 *
 	 * @return void
 	 *

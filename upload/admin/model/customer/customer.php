@@ -1374,15 +1374,14 @@ class Customer extends \Opencart\System\Engine\Model {
 	 * Get the record of the customer authorize record in the database.
 	 *
 	 * @param int $customer_authorize_id
-	 * @param int $user_authorize_id     primary key of the user authorize record
 	 *
-	 * @return array<string, mixed> authorize record that has user authorize ID
+	 * @return array<string, mixed> authorize record that has customer authorize ID
 	 *
 	 * @example
 	 *
-	 * $this->load->model('user/user');
+	 * $this->load->model('customer/customer');
 	 *
-	 * $authorize_info = $this->model_user_user->getAuthorize($user_authorize_id);
+	 * $authorize_info = $this->model_customer_customer->getAuthorize($customer_authorize_id);
 	 */
 	public function getAuthorize(int $customer_authorize_id): array {
 		$query = $this->db->query("SELECT * FROM `" . DB_PREFIX . "customer_authorize` WHERE `customer_authorize_id` = '" . (int)$customer_authorize_id . "'");

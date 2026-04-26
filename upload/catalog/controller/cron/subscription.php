@@ -177,7 +177,7 @@ class Subscription extends \Opencart\System\Engine\Controller {
 					if ($product_info) {
 						$option_data = [];
 
-						$options = $store->model_catalog_product->getOptions($product['product_id'], $product['order_product_id']);
+						$options = $store->model_catalog_product->getOptions($product['product_id']);
 
 						foreach ($options as $option) {
 							$option_info = $this->model_checkout_subscription->getOption($result['subscription_id'], $product['subscription_product_id'], $option['product_option_id']);

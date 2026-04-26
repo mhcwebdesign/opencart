@@ -504,7 +504,7 @@ class Returns extends \Opencart\System\Engine\Controller {
 
 		$this->load->model('account/returns');
 
-		$results = $this->model_account_returns->getHistories($return_id, ($page - 1) * $limit, $limit);
+		$results = $this->model_account_returns->getHistories($return_id);
 
 		foreach ($results as $result) {
 			$data['histories'][] = [
