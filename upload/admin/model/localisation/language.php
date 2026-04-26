@@ -151,7 +151,7 @@ class Language extends \Opencart\System\Engine\Model {
 		$results = $this->model_localisation_length_class->getDescriptionsByLanguageId($this->config->get('config_language_id'));
 
 		foreach ($results as $length) {
-			$this->model_localisation_length_class->addDescription($length['length_class_id'], $language_id, $length);
+			$this->model_localisation_length_class->addDescription((int)$length['length_class_id'], $language_id, $length);
 		}
 
 		// Option
@@ -228,7 +228,7 @@ class Language extends \Opencart\System\Engine\Model {
 		$results = $this->model_localisation_stock_status->getDescriptionsByLanguageId($this->config->get('config_language_id'));
 
 		foreach ($results as $stock_status) {
-			$this->model_localisation_stock_status->addDescription($stock_status['stock_status_id'], $language_id, $stock_status);
+			$this->model_localisation_stock_status->addDescription((int)$stock_status['stock_status_id'], $language_id, $stock_status);
 		}
 
 		// Weight Class

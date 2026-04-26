@@ -34,7 +34,7 @@ class Curl {
 	/**
 	 * Send
 	 *
-	 * @param string               $route
+	 * @param string               $url
 	 * @param array<string, mixed> $data
 	 *
 	 * @return array<string, mixed>

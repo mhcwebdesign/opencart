@@ -1488,7 +1488,6 @@ class Customer extends \Opencart\System\Engine\Model {
 	 * Delete Token By Code
 	 *
 	 * @param string $code
-	 * @param int    $customer_id primary key of the customer record
 	 *
 	 * @return void
 	 *

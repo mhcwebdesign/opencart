@@ -19,12 +19,12 @@ class Upgrade extends \Opencart\System\Engine\Model {
 	/**
 	 * Add Record
 	 *
-	 * @param $table
-	 * @param $data
+	 * @param string $table
+	 * @param array<int, array<string, mixed>> $data
 	 *
 	 * @return int
 	 */
-	public function addRecord($table, $data): int {
+	public function addRecord(string $table, array $data): int {
 		$implode = [];
 
 		foreach ($data as $key => $value) {
@@ -44,10 +44,10 @@ class Upgrade extends \Opencart\System\Engine\Model {
 					$implode[] = "`" . $key . "` = '" . $this->db->escape((string)$value) . "'";
 					break;
 				case 'array':
-					$implode[] = "`" . $key . "` = '" . $this->db->escape((array)json_encode($value)) . "'";
+					$implode[] = "`" . $key . "` = '" . $this->db->escape(json_encode($value)) . "'";
 					break;
 				case 'object':
-					$implode[] = "`" . $key . "` = '" . $this->db->escape((array)json_encode($value)) . "'";
+					$implode[] = "`" . $key . "` = '" . $this->db->escape(json_encode($value)) . "'";
 					break;
 			}
 		}

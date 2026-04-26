@@ -98,36 +98,30 @@ function oc_strtolower(string $string): string {
 }
 
 /**
- * Emulation of GLOB_BRACE for Alpine/musl environments
- *
- * @param string $pattern Pattern with curly braces
- * @param int $flags Flags for glob()
- * @return array Array of matches
+ * @param string $pattern
+ * @param int    $flags
+ * @return array<int, string>
  */
-function oc_glob($pattern, $flags = 0): array {
-    // If there are no curly braces — just call glob()
-    if (strpos($pattern, '{') === false) {
-        return glob($pattern, $flags);
-    }
+function oc_glob(string $pattern, int $flags = 0): array {
+	if (strpos($pattern, '{') === false) {
+		$result = glob($pattern, $flags);
+		return is_array($result) ? $result : [];
+	}
 
-    // Find the first pair of {}
-    $matches = [];
-    if (preg_match('/\{([^}]+)\}/', $pattern, $m)) {
-        // Split the content inside braces by comma
-        $options = explode(',', $m[1]);
-        foreach ($options as $opt) {
-            // Replace the whole {a,b,c} with one option
-            $newPattern = str_replace($m[0], $opt, $pattern);
-            // Recursively call oc_glob in case of nested braces
-            $matches = array_merge($matches, oc_glob($newPattern, $flags));
-        }
-    }
+	$matches = [];
+	if (preg_match('/\{([^}]+)\}/', $pattern, $m)) {
+		$options = explode(',', $m[1]);
+		foreach ($options as $opt) {
+			$newPattern = str_replace($m[0], $opt, $pattern);
+			// Now safe because oc_glob always returns an array
+			$matches = array_merge($matches, oc_glob($newPattern, $flags));
+		}
+	}
 
-    // Remove duplicates and sort results
-    $matches = array_unique($matches);
-    sort($matches);
+	$matches = array_unique($matches);
+	sort($matches);
 
-    return $matches;
+	return $matches;
 }
 
 // Pre PHP8 compatibility

@@ -870,7 +870,7 @@ class Order extends \Opencart\System\Engine\Model {
 					$this->load->model('account/transaction');
 
 					if (!$this->model_account_transaction->getTotalTransactionsByOrderId($order_id)) {
-						$this->model_account_transaction->addTransaction($order_info['affiliate_id'], $this->language->get('text_order_id') . ' #' . $order_id, $order_info['commission'], $order_id);
+						$this->model_account_transaction->addTransaction($order_info['affiliate_id'], $order_id, $this->language->get('text_order_id') . ' #' . $order_id, (float)$order_info['commission']);
 					}
 				}
 

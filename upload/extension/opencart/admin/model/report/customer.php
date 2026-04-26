@@ -42,7 +42,7 @@ class Customer extends \Opencart\System\Engine\Model {
 	/**
 	 * Get Total Customers By Week
 	 *
-	 * @return array<string, array<string, mixed>>
+	 * @return array<int, array<string, mixed>>
 	 *
 	 * @example
 	 *
@@ -77,7 +77,7 @@ class Customer extends \Opencart\System\Engine\Model {
 	/**
 	 * Get Total Customers By Month
 	 *
-	 * @return array<string, array<string, mixed>>
+	 * @return array<int, array<string, mixed>>
 	 *
 	 * @example
 	 *
@@ -110,7 +110,7 @@ class Customer extends \Opencart\System\Engine\Model {
 	/**
 	 * Get Total Customers By Year
 	 *
-	 * @return array<string, array<string, mixed>>
+	 * @return array<int, array<string, mixed>>
 	 *
 	 * @example
 	 *

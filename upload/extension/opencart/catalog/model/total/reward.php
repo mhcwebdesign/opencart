@@ -111,6 +111,6 @@ class Reward extends \Opencart\System\Engine\Model {
 	public function unconfirm(array $order_info): void {
 		$this->load->model('account/reward');
 
-		$this->model_account_reward->deleteRewardByOrderId($order_info['order_id']);
+		$this->model_account_reward->deleteRewardsByOrderId($order_info['order_id']);
 	}
 }
