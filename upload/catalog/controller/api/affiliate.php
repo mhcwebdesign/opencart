@@ -45,7 +45,7 @@ class Affiliate extends \Opencart\System\Engine\Controller {
 
 			foreach ($results as $result) {
 				if ($result['code'] == 'subtotal') {
-					$subtotal = $results['value'];
+					$subtotal = $result['value'];
 
 					break;
 				}

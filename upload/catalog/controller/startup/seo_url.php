@@ -107,8 +107,8 @@ class SeoUrl extends \Opencart\System\Engine\Controller {
 
 			$index = $key . '=' . $value;
 
-			if (!isset($this->data[$language_id][$index])) {
-				$this->data[$language_id][$index] = $this->model_design_seo_url->getSeoUrlByKeyValue((string)$key, (string)$value);
+			if (!isset($this->data[(string)$language_id][$index])) {
+				$this->data[(string)$language_id][$index] = $this->model_design_seo_url->getSeoUrlByKeyValue((string)$key, (string)$value);
 			}
 
 			if ($this->data[$language_id][$index]) {

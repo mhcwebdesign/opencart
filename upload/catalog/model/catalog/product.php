@@ -35,7 +35,6 @@ class Product extends \Opencart\System\Engine\Model {
 	 *
 	 * @param int                  $product_id primary key of the product record
 	 * @param int                  $quantity
-	 * @param array<string, mixed> $data       array of data
 	 *
 	 * @return int
 	 *

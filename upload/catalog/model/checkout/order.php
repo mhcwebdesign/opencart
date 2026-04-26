@@ -441,7 +441,6 @@ class Order extends \Opencart\System\Engine\Model {
 	 * Delete order product record in the database.
 	 *
 	 * @param int $order_id         primary key of the order record
-	 * @param int $order_product_id primary key of the order product record
 	 *
 	 * @return void
 	 *
@@ -536,7 +535,6 @@ class Order extends \Opencart\System\Engine\Model {
 	 * Delete order option records in the database.
 	 *
 	 * @param int $order_id         primary key of the order record
-	 * @param int $order_product_id primary key of the order product record
 	 *
 	 * @return void
 	 *
@@ -615,7 +613,6 @@ class Order extends \Opencart\System\Engine\Model {
 	 * Delete order subscription record in the database.
 	 *
 	 * @param int $order_id         primary key of the order record
-	 * @param int $order_product_id primary key of the order product record
 	 *
 	 * @return void
 	 *
@@ -870,10 +867,10 @@ class Order extends \Opencart\System\Engine\Model {
 				// Affiliate add commission if complete status
 				if ($order_info['affiliate_id'] && $this->config->get('config_affiliate_auto')) {
 					// Add commission if sale is linked to affiliate referral.
-					$this->load->model('account/customer');
+					$this->load->model('account/transaction');
 
-					if (!$this->model_account_customer->getTotalTransactionsByOrderId($order_id)) {
-						$this->model_account_customer->addTransaction($order_info['affiliate_id'], $this->language->get('text_order_id') . ' #' . $order_id, $order_info['commission'], $order_id);
+					if (!$this->model_account_transaction->getTotalTransactionsByOrderId($order_id)) {
+						$this->model_account_transaction->addTransaction($order_info['affiliate_id'], $this->language->get('text_order_id') . ' #' . $order_id, $order_info['commission'], $order_id);
 					}
 				}
 

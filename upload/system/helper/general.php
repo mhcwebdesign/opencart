@@ -104,7 +104,7 @@ function oc_strtolower(string $string): string {
  * @param int $flags Flags for glob()
  * @return array Array of matches
  */
-function oc_glob($pattern, $flags = 0) {
+function oc_glob($pattern, $flags = 0): array {
     // If there are no curly braces — just call glob()
     if (strpos($pattern, '{') === false) {
         return glob($pattern, $flags);

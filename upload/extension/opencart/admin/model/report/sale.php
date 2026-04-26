@@ -86,7 +86,7 @@ class Sale extends \Opencart\System\Engine\Model {
 	/**
 	 * Get Total Orders By Week
 	 *
-	 * @return array<int, array<string, int>> total number of order records by week
+	 * @return array<string, array<string, mixed>> total number of order records by week
 	 *
 	 * @example
 	 *
@@ -127,7 +127,7 @@ class Sale extends \Opencart\System\Engine\Model {
 	/**
 	 * Get Total Orders By Month
 	 *
-	 * @return array<int, array<string, int>> total number of order records by month
+	 * @return array<string, array<string, mixed>> total number of order records by month
 	 *
 	 * @example
 	 *
@@ -166,7 +166,7 @@ class Sale extends \Opencart\System\Engine\Model {
 	/**
 	 * Get Total Orders By Year
 	 *
-	 * @return array<int, array<string, int>> total number of order records by year
+	 * @return array<int|string, array<string, mixed>> total number of order records by year
 	 *
 	 * @example
 	 *
