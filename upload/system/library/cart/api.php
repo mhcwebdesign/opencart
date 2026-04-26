@@ -35,6 +35,11 @@ class Api {
 		$this->language = $language;
 	}
 
+	/**
+	 * @param string               $route
+	 * @param array<mixed, mixed>  $data
+	 * @return array<mixed, mixed>
+	 */
 	public function send(string $route, array|object $data = []): array {
 		$time = time();
 
