@@ -19,8 +19,8 @@ class Upgrade extends \Opencart\System\Engine\Model {
 	/**
 	 * Add Record
 	 *
-	 * @param string $table
-	 * @param array<int, array<string, mixed>> $data
+	 * @param string               $table
+	 * @param array<string, mixed> $data
 	 *
 	 * @return int
 	 */
