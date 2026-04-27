@@ -862,7 +862,8 @@ div.required .col-form-label:not(span):before, div.required .form-label:before, 
 }
 
 .list-check li::before {
-    font-family: 'Font Awesome 6 Solid';
+    font-family: 'Font Awesome 7 Free';
+    font-weight: 600;
     content: "\f00c";
     margin-left: -30px;
     width: 29px;
