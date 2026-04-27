@@ -9,7 +9,6 @@ $_['text_progress']          = 'Progression de l\'installation';
 $_['text_installed']         = 'Extensions installées';
 $_['text_info']              = 'Information sur les extensions';
 $_['text_install']           = 'Installation des fichiers à partir de %s envers %s de %s';
-$_['text_vendor']            = 'Refraîchir les fichiers fournisseurs';
 
 // Colonne
 $_['column_image']           = 'Image';
