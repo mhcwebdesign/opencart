@@ -627,42 +627,13 @@ class Installer extends \Opencart\System\Engine\Controller {
 		}
 
 		if (!$json) {
-			$json['text'] = $this->language->get('text_vendor');
-
-			$json['next'] = str_replace('&amp;', '&', $this->url->link('marketplace/installer.vendor', 'user_token=' . $this->session->data['user_token'], true));
-		}
-
-		$this->response->addHeader('Content-Type: application/json');
-		$this->response->setOutput(json_encode($json));
-	}
-
-	/**
-	 * Vendor
-	 *
-	 * Generate new autoloader file
-	 *
-	 * @return void
-	 */
-	public function vendor(): void {
-		$this->load->language('marketplace/installer');
-
-		$json = [];
-
-		if (!$this->user->hasPermission('modify', 'marketplace/installer')) {
-			$json['error'] = $this->language->get('error_permission');
-		}
-
-		if (!$json) {
-			$this->load->helper('vendor');
-
-			oc_generate_vendor();
-
 			$json['success'] = $this->language->get('text_success');
 		}
 
 		$this->response->addHeader('Content-Type: application/json');
 		$this->response->setOutput(json_encode($json));
 	}
+
 
 	/**
 	 * Uninstall
@@ -782,15 +753,7 @@ class Installer extends \Opencart\System\Engine\Controller {
 
 			$this->model_setting_modification->deleteModificationsByExtensionInstallId($extension_install_id);
 
-			$json['text'] = $this->language->get('text_vendor');
-
-			$url = '';
-
-			if (isset($this->request->get['extension_install_id'])) {
-				$url .= '&extension_install_id=' . $this->request->get['extension_install_id'];
-			}
-
-			$json['next'] = $this->url->link('marketplace/installer.vendor', 'user_token=' . $this->session->data['user_token'] . $url, true);
+			$json['success'] = $this->language->get('text_success');
 		}
 
 		$this->response->addHeader('Content-Type: application/json');
