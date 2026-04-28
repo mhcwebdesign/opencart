@@ -100,11 +100,13 @@ function oc_strtolower(string $string): string {
 /**
  * @param string $pattern
  * @param int    $flags
+ *
  * @return array<int, string>
  */
 function oc_glob(string $pattern, int $flags = 0): array {
 	if (strpos($pattern, '{') === false) {
 		$result = glob($pattern, $flags);
+
 		return is_array($result) ? $result : [];
 	}
 
