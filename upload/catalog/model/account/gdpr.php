@@ -34,8 +34,8 @@ class Gdpr extends \Opencart\System\Engine\Model {
 	 *
 	 * Edit gdpr status record in the database.
 	 *
-	 * @param int  $gdpr_id primary key of the gdpr record
-	 * @param int  $status
+	 * @param int $gdpr_id primary key of the gdpr record
+	 * @param int $status
 	 *
 	 * @return void
 	 *

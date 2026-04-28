@@ -36,8 +36,9 @@ class Api {
 	}
 
 	/**
-	 * @param string               $route
-	 * @param array<mixed, mixed>  $data
+	 * @param string              $route
+	 * @param array<mixed, mixed> $data
+	 *
 	 * @return array<mixed, mixed>
 	 */
 	public function send(string $route, array|object $data = []): array {

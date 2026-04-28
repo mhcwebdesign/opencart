@@ -440,7 +440,7 @@ class Order extends \Opencart\System\Engine\Model {
 	 *
 	 * Delete order product record in the database.
 	 *
-	 * @param int $order_id         primary key of the order record
+	 * @param int $order_id primary key of the order record
 	 *
 	 * @return void
 	 *
@@ -534,7 +534,7 @@ class Order extends \Opencart\System\Engine\Model {
 	 *
 	 * Delete order option records in the database.
 	 *
-	 * @param int $order_id         primary key of the order record
+	 * @param int $order_id primary key of the order record
 	 *
 	 * @return void
 	 *
@@ -612,7 +612,7 @@ class Order extends \Opencart\System\Engine\Model {
 	 *
 	 * Delete order subscription record in the database.
 	 *
-	 * @param int $order_id         primary key of the order record
+	 * @param int $order_id primary key of the order record
 	 *
 	 * @return void
 	 *

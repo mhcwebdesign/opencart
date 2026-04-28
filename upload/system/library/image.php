@@ -152,7 +152,7 @@ class Image {
 				imagewebp($this->image, $file);
 			}
 
-			unset($this->image);
+			$this->image = null;
 		}
 	}
 
@@ -280,7 +280,7 @@ class Image {
 		imagesavealpha($this->image, true);
 		imagecopy($this->image, $watermark->getImage(), $watermark_pos_x, $watermark_pos_y, 0, 0, $watermark->getWidth(), $watermark->getHeight());
 
-//		imagedestroy($watermark->getImage());
+		// imagedestroy($watermark->getImage());
 	}
 
 	/**
