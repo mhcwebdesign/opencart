@@ -68,6 +68,10 @@
 * Changed: Extensive admin audit fixes: https://github.com/opencart/opencart/pull/15384
 * Changed: Extensive admin audit fixes: removal of obsolete language texts in https://github.com/opencart/opencart/pull/15385
 * Changed: Some more argument type fixes in https://github.com/opencart/opencart/pull/15386
+* Fixed: Some more fixes as per PHPstan errors and warnings in https://github.com/opencart/opencart/pull/15389, https://github.com/opencart/opencart/pull/15390, and https://github.com/opencart/opencart/pull/15391
+* Fixed: use Composer for autoloading in https://github.com/opencart/opencart/pull/15392
+* Fixed: Fix FA7 admin icon in https://github.com/opencart/opencart/pull/15394
+* Changed: Applied PHP CS Fixer in https://github.com/opencart/opencart/pull/15400
 
 ## [v4.1.0.3] (Release date: 24.03.2025)
 
